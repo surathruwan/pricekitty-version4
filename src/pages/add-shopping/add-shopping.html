@@ -1,0 +1,72 @@
+<!-- <ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add To Shopping</ion-title>
+
+    <ion-buttons end>
+        <button ion-button icon-only color="light">
+            <ion-icon name="ios-cart"></ion-icon>
+          </button>
+          <ion-badge ion-button-end color="secondary">1</ion-badge>
+        </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header> -->
+
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Add to Shopping List </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+          <ion-icon name="ios-cart"></ion-icon>
+        </button>
+        <ion-badge ion-button-end color="secondary">1</ion-badge>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+  <ion-item>
+      <ion-thumbnail item-start>
+        <img src="http://www.malibanbiscuit.com/public/themes/maliban/images/BIG-chocolate-cream.png">
+      </ion-thumbnail>
+    <!--button ion-button outline item-end (click)="navigateToBiscuitCategoryPage()">View Category</button-->
+    <ion-label floating >Chocolate Biscuit</ion-label>
+    
+    <!--ion-input type="text"></ion-input-->
+
+      <!--ion-select [(ngModel)]="product" color="primary">
+        <ion-label>Select</ion-label>
+        <ion-option value="mali">Maliban 100g</ion-option>
+        <ion-option value="munch">Munchee 100g</ion-option>
+      </ion-select-->
+
+  </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label floating color="primary">Number of Item</ion-label>
+    <ion-input type="number"  min="1" value="1"></ion-input>
+  </ion-item>
+
+  <button ion-button icon-only>
+      <ion-icon name="ios-arrow-back" (click)="decreaseQuantity()"></ion-icon>
+    </button>
+    <button ion-button icon-only>
+        <ion-icon name="ios-arrow-forward" (click)="increaseQuantity()"></ion-icon>
+      </button>
+
+  <button ion-button block color="primary" (click)="navigateToMainCartPage()">Add To Cart</button>
+  
+  <!--button ion-button icon-only>
+      <ion-icon name="ios-arrow-dropleft"></ion-icon>
+    </button-->
+
+</ion-content>

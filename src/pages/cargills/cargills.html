@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cargills Super Market - Malabe 1</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+
+    <ion-card style="padding-bottom:3%">
+      
+       
+      
+      <img center src="./assets/images/logo_cargills1.png" style="width:50%;margin-left:25%;"/>
+       
+    
+      
+    </ion-card>
+
+    <!--Add Google map-->
+    <ion-card>
+
+      <ion-list>
+
+        <!-- <ion-item>
+          <ion-label floating>start</ion-label>
+          <ion-input type="text" [(ngModel)]="start" id="orig" ></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label floating>Destination</ion-label>
+          <ion-input type="text" [(ngModel)]="Destination" id="dest" value=this.distance></ion-input>
+        </ion-item> -->
+    
+        <ion-item>
+          <ion-label >Distance:</ion-label>
+          <ion-input type="text" [(ngModel)]="distance" id="dist"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label >Price:</ion-label>
+          <ion-input type="text" [(ngModel)]="price" id="price"></ion-input>
+        </ion-item>
+      
+      
+        
+        
+
+      
+      </ion-list>
+    
+      
+    </ion-card>
+ 
+</ion-content>

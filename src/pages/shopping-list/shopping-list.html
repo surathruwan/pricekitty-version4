@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Items</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item  class="cursor-toggle" (click)="navigateToBiscuitCategoryPage()">
+          <ion-thumbnail item-start>
+            <img src="http://www.malibanbiscuit.com/public/themes/maliban/images/BIG-chocolate-cream.png">
+          </ion-thumbnail>
+          <h2>Biscuit items</h2>
+          <!--p>to select press the VIEW button</p>
+          <button ion-button outline round item-end color="primary" (click)="navigateToBiscuitCategoryPage()">Add To Shopping</button-->
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+          <ion-item class="cursor-toggle" (click)="navigateToBiscuitCategoryPage()">
+            <ion-thumbnail item-start>
+              <img src="http://sweetpeaskitchen.com/wp-content/uploads/2014/09/S%E2%80%99mores-Ice-Cream1-180x180.jpg">
+            </ion-thumbnail>
+            <h2>Ice cream</h2>
+            <!--p>to select press the VIEW button</p>
+            <button ion-button outline round item-end color="primary" (click)="navigateToAddShoppingPage()">Add To Shopping</button-->
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+            <ion-item class="cursor-toggle" (click)="navigateToBiscuitCategoryPage()">
+              <ion-thumbnail item-start>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/91PRsPyUmBL._SX355_.jpg">
+              </ion-thumbnail>
+              <h2>Snacks</h2>
+              <!--p>to select press the VIEW button</p>
+              <button ion-button outline round item-end color="primary" (click)="navigateToAddShoppingPage()">Add To Shopping</button-->
+            </ion-item>
+          </ion-list>
+
+</ion-content>

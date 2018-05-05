@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Wish List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h1>My Wishing List</h1>
+ 
+  
+  <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+  <ion-item>
+      <ion-label color="primary">Items</ion-label>
+      <ion-input type="text" [(ngModel)]="name" placeholder="Enter Items"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary"></ion-label>
+        <ion-input type="text" [(ngModel)]="it2"  placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary"></ion-label>
+          <ion-input type="text" [(ngModel)]="it3"  placeholder=""></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary"></ion-label>
+            <ion-input type="text" [(ngModel)]="it4" placeholder=""></ion-input>
+          </ion-item>
+          <button ion-button block color="primary" >Add to my wishList</button>
+          <button ion-button block color="primary">Cancel</button>
+       
+          
+
+          <ion-img class="centerlogo" [width]="150" [height]="100" src="assets/imgs/2.jpg"></ion-img>
+            
+          
+
+</ion-content>

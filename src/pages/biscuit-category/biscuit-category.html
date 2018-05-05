@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Biscuit Category</ion-title>
+
+    <ion-buttons end>
+        <button ion-button icon-only color="light">
+            <ion-icon name="ios-cart"></ion-icon>
+          </button>
+          <ion-badge ion-button-end color="secondary">0</ion-badge>
+        </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card *ngFor="let item of biscuitListRef$ | async">
+        <img src="{{item.itemUrl}}"/>        <!--{{item.itemUrl}}-->
+        <ion-card-content>
+          <ion-card-title>
+            {{item.itemName}}
+            </ion-card-title>
+          <p>{{item.itemWeight}}</p>
+          <button ion-button (click)="navigateToAddShoppingPage()">Select<ion-icon name="md-checkmark-circle-outline"></ion-icon></button>
+          <ion-item>
+              <ion-label floating color="primary">Quantity</ion-label>
+              <ion-input type="number" min="1" value="{{currentNumber}}"></ion-input>
+            </ion-item>
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back" (click)="decrementy()"></ion-icon>
+              </button>
+              <button ion-button icon-only>
+                  <ion-icon name="ios-arrow-forward" (click)="increment()"></ion-icon>
+                </button>
+        </ion-card-content>
+      </ion-card>
+    <!--ion-list>
+      <ion-item *ngFor="let item of biscuitListRef$ | async">
+        <h2>{{item.itemName}}</h2>
+        <h2>{{item.itemWeight}}</h2>
+      </ion-item>
+    </ion-list-->
+
+      <!--ion-card>
+          <img src="../../assets/images/malibanChocolateBiscuit.png"/>
+          <ion-card-content>
+            <ion-card-title>
+              Maliban chocolate biscuit
+              </ion-card-title>
+            <p>200g</p>
+            <button ion-button round (click)="navigateToAddShoppingPage()">Select<ion-icon name="md-checkmark-circle-outline"></ion-icon></button>
+          </ion-card-content>
+        </ion-card-->
+
+</ion-content>
