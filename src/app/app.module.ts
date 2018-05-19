@@ -28,7 +28,9 @@ import { WishlistPage } from '../pages/wishlist/wishlist';
 import { RequestFormPage } from '../pages/request-form/request-form';
 import { ViewlistPage } from '../pages/viewlist/viewlist';
 import { OrderPage } from '../pages/order/order';
+
 import { AboutusPage } from '../pages/aboutus/aboutus';
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { AboutusPage } from '../pages/aboutus/aboutus';
     ViewlistPage,
     OrderPage,
     AboutusPage,
+
     
   ], 
   imports: [
@@ -76,11 +79,12 @@ import { AboutusPage } from '../pages/aboutus/aboutus';
     RequestFormPage,
     ViewlistPage,
     OrderPage,
-    AboutusPage
+    AboutusPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    LaunchNavigator,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GlobalProvider
   ]

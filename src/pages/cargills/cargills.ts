@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import{LaunchNavigator , LaunchNavigatorOptions } from  '@ionic-native/launch-navigator';
 declare var google;
 /**
  * Generated class for the CargillsPage page.
@@ -18,7 +19,7 @@ export class CargillsPage {
   cstart:any = '';
   Destination :any='' ; 
   service : any='';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private launchNavigator: LaunchNavigator) {
   }
 
   ionViewDidLoad() {
@@ -67,5 +68,10 @@ export class CargillsPage {
   }
   }
 
+  navme(address){
+    this.launchNavigator.navigate(address);
+  }
+
 }
 
+ 
