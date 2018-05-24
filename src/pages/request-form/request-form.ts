@@ -48,7 +48,7 @@ export class RequestFormPage {
 
         let alert = this.alertCtrl.create({
           title: 'Item Added',
-          subTitle: 'Item Requested',
+          subTitle: 'Item will be requested',
           buttons: ['Dismiss']
         });
         alert.present();
