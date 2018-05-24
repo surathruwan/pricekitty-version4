@@ -17,7 +17,7 @@ export class RegisterPage {
     try {
       const result = await this.AFauth.auth.createUserWithEmailAndPassword(user.email, user.password);
       if (result) {
-        this.nav.push('MainPage');
+        this.nav.setRoot('MainPage');
       }
     } catch (e) {
       console.error(e);
