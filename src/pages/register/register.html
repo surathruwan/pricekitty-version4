@@ -1,0 +1,32 @@
+
+  
+  <ion-content class="register-content" padding>
+    <div>
+  
+      <form>
+        <ion-list>
+          
+           <ion-item>
+              <ion-label color="black" floating>Email</ion-label>
+              <ion-input type="email" name="email" placeholder="" [(ngModel)]="user.email"></ion-input>
+           </ion-item>
+           <ion-item>
+            <ion-label color="black" floating>password</ion-label>
+            <ion-input type="password" name="password" placeholder="" [(ngModel)]="user.password"></ion-input>
+           </ion-item>
+  
+          </ion-list>
+          <ion-row>
+              <ion-col >
+            <button ion-button class="register-btn" round clear (click)="createAccount(user)">Submit</button>
+          </ion-col>
+        </ion-row>
+  
+  
+  
+        
+  
+  
+      </form>
+    </div>
+  </ion-content>

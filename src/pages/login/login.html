@@ -1,0 +1,45 @@
+
+
+
+<ion-content text-center>
+  <div class="bg">
+      <div class="head" text-center>
+        <img center src="./assets/images/logo.jpg" style="width:50%;margin-top:2%;border-radius:25%"/>    
+      </div>
+
+  <form (ngSubmit)="login()" #registerForm="ngForm">
+    <ion-row>
+      <ion-col>
+        <ion-list >
+          
+        
+          <h1 center>Login</h1>
+          <ion-item>
+            <ion-input type="email" placeholder="Email" name="Email" [(ngModel)]="user.email" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required></ion-input>
+          </ion-item>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col >
+        <!-- <button  ion-button  round clear (click)="login(user)" full type="submit" [disabled]="!registerForm.form.valid">Login</button> -->
+        
+        <button ion-button color="primary" (click)="login(user)" type="submit" [disabled]="!registerForm.form.valid">Login</button>
+        <button  ion-button color="secondary"   (click)="createAccount()">Create New Account</button>
+       
+
+      </ion-col>
+    </ion-row>
+    
+
+
+
+  </form>
+</div>
+</ion-content>

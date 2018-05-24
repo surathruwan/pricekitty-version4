@@ -1,0 +1,71 @@
+page-login {
+ 
+  .bg {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #6eabe7 0%, #ccffff 90%);
+
+
+    
+    .head h1 {
+      padding-top: 30px;
+      font-size: 8vh!important;
+      font-weight: lighter!important;
+      font-family: 'Pacifico', cursive;
+      color: #fff;
+      
+     
+  }
+     .head h5 {
+    font-family:  'Pacifico', cursive;
+    padding-top: 3px;
+    font-weight: 200;
+    font-size: 3;
+    color: #fff;
+} 
+      
+
+ion-item {
+        border-radius: 20px !important;
+           padding-left: 20px !important;
+           
+           font-size: 1.07em;
+           margin-bottom: 10px;
+           border: 1px solid #ffffff;
+           border-bottom: 0px !important;
+           box-shadow: none !important;
+        }
+       
+        ion-row {
+          align-items: center;
+          text-align: center;
+        }
+    
+        
+       .signup-col {
+         margin: 0px 16px 0px 16px;
+         padding-bottom: 20px;
+       }
+       
+   
+     
+   
+       .item-inner {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        color:rgb(12, 12, 12);
+        opacity: 0.6;
+       }
+   
+
+   
+   
+ 
+  
+  
+      }
+    }

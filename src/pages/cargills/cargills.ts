@@ -28,7 +28,7 @@ export class CargillsPage {
 
   calculatorCargills(){
     var origin = 'SLIIT',
-    destination = 'Cargills Food City – Malabe 1',
+    destination = 'Cargills Food City – Malabe 1, 766 Kaduwela Rd, Malabe',
     service = new google.maps.DistanceMatrixService();
   
   service.getDistanceMatrix(
@@ -42,18 +42,13 @@ export class CargillsPage {
     callback
   );
   
+  
+  
   function callback(response, status) {
     //var orig = document.getElementById("orig"),
-    var orig = "SLIIT",
-        dest = "Cargills Food City – Malabe 1",
-        dist = document.getElementById("dist");
-  
-    if(status=="OK") {
-        //orig.value = response.destinationAddresses[0];
-       // dest.value = response.originAddresses[0];
-        //dist.value = response.rows[0].elements[0].distance.text;
-        
-        //alert(response.destinationAddresses[0] +" "+ response.originAddresses[0] + " "+ response.rows[0].elements[0].distance.text);
+    
+
+        if(status=="OK") {
         
         document.getElementById("dist").innerHTML = response.rows[0].elements[0].distance.text;
         var distance = response.rows[0].elements[0].distance.text;

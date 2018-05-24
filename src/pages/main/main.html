@@ -1,0 +1,65 @@
+<ion-header >
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title >Home</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content  padding>
+    <ion-card style="padding-bottom:2%;">
+      <ion-slides loop="true" autoplay="3000" pager>
+        <ion-slide *ngFor="let number of [1,2,3,4]">
+          <img src="./assets/images/{{number}}.jpg" />
+        </ion-slide>
+        
+      </ion-slides>
+    </ion-card>
+    
+    
+  <ion-card>
+  
+      <ion-item>
+          <ion-thumbnail item-left>
+            <img src="./assets/images/product/maliban_choco_biscuit100g.jpg">
+          </ion-thumbnail>
+          <h3 style="margin-top:1%;">Maliban Chocolate Biscuit</h3>
+          <p>100g</p>
+         
+          <button ion-button  >Add to cart</button>
+        </ion-item>
+  
+        <ion-item>
+            <ion-thumbnail item-left>
+              <img src="./assets/images/product/munchee_choco_biscuit100g.jpg">
+            </ion-thumbnail>
+            <h3 style="margin-top:1%;">Munchee Chocolate Biscuit</h3>
+            <p >100g</p>
+            <button ion-button >Add to cart</button>
+          </ion-item>
+  
+  
+  
+          <ion-item>
+            <ion-thumbnail item-left>
+              <img src="./assets/images/product/sunlight_120g.jpg">
+            </ion-thumbnail>
+            <h3 style="margin-top:1%;">Sunlight Soap Green</h3>
+            <p   >120g</p>
+            <button ion-button >Add to cart</button>
+          </ion-item>
+  
+  
+          <ion-item>
+            <ion-thumbnail item-left>
+              <img src="./assets/images/product/elephantHouse_fruit&nut_1L.jpg">
+            </ion-thumbnail>
+            <h3 style="margin-top:1%;"> Elephant House Fruit & Nut</h3>
+            <p >1 L</p>
+            <button ion-button>Add to cart</button>
+          </ion-item>
+  
+  </ion-card>
+  </ion-content>
+  

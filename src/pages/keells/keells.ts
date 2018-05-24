@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
 declare var google;
 /**
  * Generated class for the KeellsPage page.
@@ -17,7 +18,7 @@ export class KeellsPage {
   start:any = '';
   Destination :any='' ; 
   service : any='';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private launchNavigator: LaunchNavigator) {
   }
 
   ionViewDidLoad() {
@@ -43,16 +44,10 @@ export class KeellsPage {
   
   function callback(response, status) {
     //var orig = document.getElementById("orig"),
-    var orig = "SLIIT",
-        dest = "Keells Super, 296 Kaduwela Rd, Malabe",
-        dist = document.getElementById("dist");
+   
   
     if(status=="OK") {
-        //orig.value = response.destinationAddresses[0];
-       // dest.value = response.originAddresses[0];
-        //dist.value = response.rows[0].elements[0].distance.text;
         
-        //alert(response.destinationAddresses[0] +" "+ response.originAddresses[0] + " "+ response.rows[0].elements[0].distance.text);
         
         document.getElementById("dist").innerHTML = response.rows[0].elements[0].distance.text;
         var distance = response.rows[0].elements[0].distance.text;
@@ -69,6 +64,9 @@ export class KeellsPage {
 
 
 
+  navme(address){
+    this.launchNavigator.navigate(address);
+  }
 
 }
 
