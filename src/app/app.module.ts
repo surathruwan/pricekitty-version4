@@ -21,7 +21,8 @@ import { GlobalProvider } from '../providers/global/global';
 
 
 
-import { HttpClientModule } from '@angular/common/http'; import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
 import { CargillsPage } from '../pages/cargills/cargills';
 import { KeellsPage } from '../pages/keells/keells';
 import { SuperMarketPage } from '../pages/super-market/super-market';
@@ -39,7 +40,9 @@ import { AuthService } from '../providers/auth-service/auth-service';
 import { Push } from '@ionic-native/push';
 
 
-
+import { ProductProvider } from '../providers/product/product';
+import { ShoppingCartProvider } from '../providers/shopping-cart/shopping-cart';
+import { ProfilePage } from '../pages/profile/profile';
 
 
 
@@ -66,7 +69,7 @@ import { Push } from '@ionic-native/push';
     OrderPage,
     AboutusPage,
     LoginPage,
-    
+    ProfilePage,
  
 
   
@@ -105,6 +108,7 @@ import { Push } from '@ionic-native/push';
     OrderPage,
     AboutusPage,
     LoginPage,
+    ProfilePage,
    
 
   ],
@@ -115,7 +119,9 @@ import { Push } from '@ionic-native/push';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GlobalProvider,
     AuthService,
-    Push
+    Push,
+    ProductProvider,
+    ShoppingCartProvider
   ]
 })
 export class AppModule {}

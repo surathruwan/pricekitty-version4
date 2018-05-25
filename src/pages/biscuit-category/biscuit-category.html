@@ -16,17 +16,17 @@
 
 
 <ion-content padding>
-    <ion-card *ngFor="let item of biscuitListRef$ | async">
+    <ion-card *ngFor="let item of biscuitListRef$ | async" >
         <img src="{{item.itemUrl}}"/>        <!--{{item.itemUrl}}-->
         <ion-card-content>
           <ion-card-title>
             {{item.itemName}}
             </ion-card-title>
-          <p>{{item.itemWeight}}</p>
-          <button ion-button (click)="navigateToAddShoppingPage()">Select<ion-icon name="md-checkmark-circle-outline"></ion-icon></button>
+          <p>{{item.itemWeight}}</p>                               <!--/////////////////test    (click)="navigateToAddShoppingPage()" //(click)="getQuantity(item)" -->
+          <button ion-button (click)="addToCart(item)" (click)="getQuantity(item)">Select<ion-icon name="md-checkmark-circle-outline"></ion-icon></button>
           <ion-item>
               <ion-label floating color="primary">Quantity</ion-label>
-              <ion-input type="number" min="1" value="{{currentNumber}}"></ion-input>
+              <ion-input type="number" min="1" value="{{cartQ.quantity}}"></ion-input>   <!--{{getQuantity(item)}}-->
             </ion-item>
             <button ion-button icon-only>
                 <ion-icon name="ios-arrow-back" (click)="decrementy()"></ion-icon>
@@ -36,22 +36,5 @@
                 </button>
         </ion-card-content>
       </ion-card>
-    <!--ion-list>
-      <ion-item *ngFor="let item of biscuitListRef$ | async">
-        <h2>{{item.itemName}}</h2>
-        <h2>{{item.itemWeight}}</h2>
-      </ion-item>
-    </ion-list-->
-
-      <!--ion-card>
-          <img src="../../assets/images/malibanChocolateBiscuit.png"/>
-          <ion-card-content>
-            <ion-card-title>
-              Maliban chocolate biscuit
-              </ion-card-title>
-            <p>200g</p>
-            <button ion-button round (click)="navigateToAddShoppingPage()">Select<ion-icon name="md-checkmark-circle-outline"></ion-icon></button>
-          </ion-card-content>
-        </ion-card-->
 
 </ion-content>

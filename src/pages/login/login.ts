@@ -28,7 +28,7 @@ export class LoginPage {
       }
       else
       {
-        this.presentAlert();
+        
       }
      
       
@@ -39,13 +39,7 @@ export class LoginPage {
        }
   }
 
-  presentAlert() {
-    let alert = this.alertCtrl.create({
-      title: 'Low battery',
-      subTitle: '10% of battery remaining',
-      buttons: ['Dismiss']
-    });
-  }
+  
   createAccount(){
     this.navCtrl.push('RegisterPage'); 
   }

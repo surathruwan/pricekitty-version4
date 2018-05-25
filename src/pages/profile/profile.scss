@@ -1,0 +1,17 @@
+page-profile {
+  .profile-content {
+    background: linear-gradient(to bottom, #003366 0%, #ccffff 100%);
+   // font-family:  'Pacifico', cursive;
+    ion-row {
+        align-items: center;
+        text-align: center;
+      }
+      .profile-btn {
+        background:linear-gradient(to top right, #003366 31%, #ffffff 99%);
+        border-radius: 20px !important;
+        border: 1.6px solid #ffffff;
+      }
+
+}
+
+}

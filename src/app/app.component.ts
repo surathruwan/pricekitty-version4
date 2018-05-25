@@ -20,7 +20,7 @@ import { OrderPage } from '../pages/order/order';
 import { AboutusPage } from '../pages/aboutus/aboutus';
 import { LoginPage } from '../pages/login/login';
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
-
+import { ProfilePage } from '../pages/profile/profile';
 
 
 
@@ -56,6 +56,7 @@ export class MyApp {
    
       { title: 'About Us', component: AboutusPage },
       { title: 'LogOut', component: LoginPage },
+      { title: 'Profile', component: ProfilePage },
  
       
 

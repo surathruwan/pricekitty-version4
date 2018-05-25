@@ -1,9 +1,9 @@
 export const FIREBASE_CREDENTIALS = {
 
-    apiKey: "AIzaSyDRWfRbS9NOK6uy_p6DNBngaEYMiUifZ3E",
-    authDomain: "pricekitty-a3f3f.firebaseapp.com",
-    databaseURL: "https://pricekitty-a3f3f.firebaseio.com",
-    projectId: "pricekitty-a3f3f",
-    storageBucket: "pricekitty-a3f3f.appspot.com",
-    messagingSenderId: "63868819248"
+  apiKey: "AIzaSyDxuWzaR660EbilvDQOmRMnax4V7OQ5XsU",
+  authDomain: "fir-crud-83ff4.firebaseapp.com",
+  databaseURL: "https://fir-crud-83ff4.firebaseio.com",
+  projectId: "fir-crud-83ff4",
+  storageBucket: "fir-crud-83ff4.appspot.com",
+  messagingSenderId: "645658990526"
   };

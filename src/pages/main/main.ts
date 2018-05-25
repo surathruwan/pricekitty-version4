@@ -47,27 +47,8 @@ export class MainPage {
  
    }
 
-    Home()
-    {
-      this.navCtrl.push('MainPage'); 
-    }
-    Profile()
-    {
-      this.navCtrl.push('');  
-    }
-    UserOpinion()
-    {
-      this.navCtrl.push('OpinionPage');  
-    }
-    aboutus()
-    {
-      this.navCtrl.push('AboutusPage');  
-    }
+  
 
-    Logout()
-    {
-      this.navCtrl.push('LoginPage'); 
-    }
    
 
   }
