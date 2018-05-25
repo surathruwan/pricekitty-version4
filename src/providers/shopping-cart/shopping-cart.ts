@@ -103,11 +103,12 @@ export class ShoppingCartProvider {
 
      item$.valueChanges().take(1).subscribe(item => {
       if(item!==null)
-        this.updateCart(biscuitItem); 
+        //this.updateCart(biscuitItem);
+        item$.update({quantity:item.quantity+1}); 
       
       else
-      this.setCart(biscuitItem);
-      
+      //this.setCart(biscuitItem);
+      item$.set({biscuitItem:biscuitItem , quantity:1});
      });
   
   }

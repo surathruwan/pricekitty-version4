@@ -55,8 +55,9 @@ export class MyApp {
       { title: 'View List', component: ViewlistPage },
    
       { title: 'About Us', component: AboutusPage },
-      { title: 'LogOut', component: LoginPage },
       { title: 'Profile', component: ProfilePage },
+      { title: 'LogOut', component: LoginPage },
+      
  
       
 

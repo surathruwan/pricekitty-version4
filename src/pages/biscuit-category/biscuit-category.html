@@ -4,10 +4,10 @@
     <ion-title>Biscuit Category</ion-title>
 
     <ion-buttons end>
-        <button ion-button icon-only color="light">
+        <button ion-button icon-only color="light" (click)="gocart()">
             <ion-icon name="ios-cart"></ion-icon>
-          </button>
-          <ion-badge ion-button-end color="secondary">0</ion-badge>
+          </button >
+          <ion-badge ion-button-end color="secondary">{{this.iconQ}}</ion-badge>
         </ion-buttons>
 
   </ion-navbar>
@@ -23,17 +23,22 @@
             {{item.itemName}}
             </ion-card-title>
           <p>{{item.itemWeight}}</p>                               <!--/////////////////test    (click)="navigateToAddShoppingPage()" //(click)="getQuantity(item)" -->
-          <button ion-button (click)="addToCart(item)" (click)="getQuantity(item)">Select<ion-icon name="md-checkmark-circle-outline"></ion-icon></button>
-          <ion-item>
+          <button ion-button (click)="addToCart(item)" (click)="incrementIcon()" (click)="getQuantity(item)" >Select<ion-icon name="md-checkmark-circle-outline"></ion-icon></button>
+          <!--ion-item>
               <ion-label floating color="primary">Quantity</ion-label>
-              <ion-input type="number" min="1" value="{{cartQ.quantity}}"></ion-input>   <!--{{getQuantity(item)}}-->
-            </ion-item>
-            <button ion-button icon-only>
-                <ion-icon name="ios-arrow-back" (click)="decrementy()"></ion-icon>
+              <ion-input type="number" min="1" value="{{qty.quantity}}"></ion-input>   <!--{{getQuantity(item)}}>
+            </ion-item-->
+            
+              <p>
+                <button ion-button icon-only (click)="decrement()" >
+                <ion-icon name="ios-arrow-back" ></ion-icon>
               </button>
-              <button ion-button icon-only>
-                  <ion-icon name="ios-arrow-forward" (click)="increment()"></ion-icon>
-                </button>
+              {{qty.quantity}}
+              <button ion-button icon-only (click)="increment()" >
+                <ion-icon name="ios-arrow-forward" ></ion-icon>
+              </button>
+            </p>
+              
         </ion-card-content>
       </ion-card>
 

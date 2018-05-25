@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Observable } from 'rxjs/Observable';
+import { AngularFireDatabase , AngularFireList } from 'angularfire2/database';
 
 /**
  * Generated class for the MainCartPage page.
@@ -14,10 +16,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'main-cart.html',
 })
 export class MainCartPage {
+  biscuitListRef$: Observable<any[]>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private db: AngularFireDatabase) {
+
+    this.biscuitListRef$ = this.db.list('/shopping_carts/').valueChanges();
   }
 
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainCartPage');
   }

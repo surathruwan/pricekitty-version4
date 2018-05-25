@@ -3,7 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { AngularFireDatabase , AngularFireList } from 'angularfire2/database';
 import { AddShoppingPage } from '../add-shopping/add-shopping';
+import { MainCartPage } from '../main-cart/main-cart';
 import { Observable } from 'rxjs/Observable';
+import firebase from 'firebase';
 
 import { BiscuitItem } from '../../models/shopping-item/biscuit-item.interface';
 import { GlobalProvider } from '../../providers/global/global';
@@ -34,7 +36,8 @@ export class BiscuitCategoryPage  {
   //*test biscuitListRef$ : Observable<any[]>;
   biscuitListRef$: Observable<any[]>;
   public cartQ={};
-  public qty:number;
+  public qty={};
+  public iconQ=0;
 
   constructor(
     public navCtrl: NavController ,
@@ -58,13 +61,31 @@ export class BiscuitCategoryPage  {
 
   //get itenm quantity
   getQuantity(biscuitItem: BiscuitItem){
-    this.cartProvider.getQuantity(biscuitItem);
+    /*this.cartProvider.getQuantity(biscuitItem);
     this.cartQ=this.cartProvider.cart;
-    console.log(this.cartQ);
-    /*let cartId=this.cartProvider.getCartId();
+    console.log(this.cartQ);*/
+    let cartId=this.cartProvider.getCartId();
     const cartRef: firebase.database.Reference = firebase.database().ref('/shopping_carts/' + cartId + '/items/' + biscuitItem.itemName  );
-     this.qty=biscuitItem.quantity;
-     }*/
+    cartRef.on('value', cartSnapshot => {
+      this.cartQ = cartSnapshot.val();
+      if(this.cartQ!==null)
+        this.qty=this.cartQ;
+    })
+    }
+
+    incrementIcon(){
+      this.iconQ=this.iconQ+1;
+    }
+
+    increment(){
+      
+    }
+    decrement(){
+
+    }
+
+    gocart(){
+      this.navCtrl.push(MainCartPage);
     }
   
   /*getQuantity(biscuitItem: BiscuitItem){ 
